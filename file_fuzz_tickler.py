@@ -230,7 +230,7 @@ for value in fuzz_library:
     assert(os.stat("fuzz_tickle_tmp" + extension).st_size != 0)
     assert(len(top + middle + bottom) == len(data))
 
-    do_pydbg_dance("fuzz_tickle_tmp" + extension)
+    do_pydbg_dance(parent_program, "fuzz_tickle_tmp" + extension)
 
     i       += 1
     crashes  = 0
@@ -262,7 +262,7 @@ for value in fuzz_library:
     assert(os.stat("fuzz_tickle_tmp" + extension).st_size != 0)
     assert(len(top + middle + bottom) == len(data))
 
-    do_pydbg_dance("fuzz_tickle_tmp" + extension)
+    do_pydbg_dance(parent_program, "fuzz_tickle_tmp" + extension)
 
     i       += 1
     crashes  = 0
